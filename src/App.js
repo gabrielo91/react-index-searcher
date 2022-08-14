@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Input } from './components/Input';
+import { DataTable } from './components/Table';
+import { Container } from './components/Container';
+import { data } from './database';
 
 function App() {
+  const [searchResult, setSearchResult] = useState(data);
+
+  const handleInput = (event) => {
+    const searchTerm = new RegExp(event.target.value.toLowerCase());
+
+    if (searchTerm) {
+      const filteredResults = data.filter(({ username, message }) => {
+        return (
+          username.toLowerCase().match(searchTerm) ||
+          message.toLowerCase().match(searchTerm)
+        );
+      });
+
+      setSearchResult(filteredResults);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Input onChange={handleInput} placeholder="Type your search criteria" />
+      <DataTable data={searchResult} />
+    </Container>
   );
 }
 
