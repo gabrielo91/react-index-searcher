@@ -19,6 +19,11 @@ const data = [
     post_date: '2019-12-08T15:30:22',
     message: '@eriky I it too (Elasticsearch, not Mars)',
   },
+  {
+    username: 'Luisa',
+    post_date: '2019-12-08T15:30:22',
+    message: '@gabo I it too (Elasticsearch, not Mars)',
+  },
 ];
 
 export { data };
