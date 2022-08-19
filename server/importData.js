@@ -12,9 +12,9 @@ async function run() {
       body: {
         mappings: {
           properties: {
-            username: { type: 'keyword' },
-            post_date: { type: 'keyword' },
-            message: { type: 'keyword' },
+            username: { type: 'text' },
+            post_date: { type: 'text' },
+            message: { type: 'text' },
           },
         },
       },
