@@ -6,13 +6,13 @@ run the following command in order to launch the kibana and elastic search servi
 docker-compose up
 ```
 
-Then populate the data going to server folder and using:
+Then populate the dat, go to server folder and use:
 
 ```
 node importData.js
 ```
 
-In order to make sure this process was successful, visit:
+If you want to make sure this process was successful, visit:
 
 ```
 http://localhost:5601/app/dev_tools#/console
