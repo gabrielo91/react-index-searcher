@@ -14,9 +14,7 @@ node importData.js
 
 If you want to make sure this process was successful, visit:
 
-```
-http://localhost:5601/app/dev_tools#/console
-```
+[http://localhost:5601/app/dev_tools#/console](http://localhost:5601/app/dev_tools#/console)
 
 and there, type:
 
@@ -46,4 +44,4 @@ npm run start
 
 then go to:
 
-`http://localhost:3000/`
+[http://localhost:3000/](http://localhost:3000/)
