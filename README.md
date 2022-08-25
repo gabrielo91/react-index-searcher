@@ -1,6 +1,6 @@
 # How to set it up
 
-run the following command in order to launch the kibana and elastic search services
+run the following command in order to launch the kibana and elastic search services:
 
 ```
 docker-compose up
